@@ -1,1 +1,1 @@
-# SweepVsPolygenic
+# SweepVsTraitOptimum

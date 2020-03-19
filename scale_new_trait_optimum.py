@@ -1,9 +1,14 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Aug 27 16:53:13 2018
-
 @author: neda
 """
+
+'''
+For the simulations minimum fitness, maximum fitness and standard deviation are 0.5, 4.5, and 0.3.
+Using the below script you can set the new trait optimum for populations with different number of loci
+and loci with different effect sizes
+'''
+
 #given the starting frequency and effect size computes the phenotype of one locus
 def compute_trait_phenotype(minor_al_freq,eff_size):
     major_al_freq = 1-minor_al_freq

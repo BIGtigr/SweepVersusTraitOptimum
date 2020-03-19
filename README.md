@@ -21,6 +21,12 @@ java -jar mim2-v193.jar qff --haplotypes-g0 FlLines_FreeBayes_biallelicSNPs_q50_
 
 ```
 
+to store haplotypes for specific time points
+
+```
+java -jar mim2-v193.jar w --haplotypes-g0 FlLines_FreeBayes_biallelicSNPs_q50_450Ne_No4X_100loci.mimhap --recombination-rate dsim.rr_LDjump-LOESS.txt --chromosome-definition "2=2L+2R,3=3L+3R" --replicate-runs 50 --snapshots 20,40,80,140 --fitness sel.txt --output-sync AF_results.sync --output-gpf fitness_result.txt --output-dir evolved_haplos
+
+```
 ## Analyze and plot the results
 
 

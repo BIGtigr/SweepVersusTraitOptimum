@@ -61,7 +61,7 @@ Compute and plot the similarity among 10 replicates in terms of the number of se
 Jaccard_index_plots.py
 ```
 
-Plot figures S1, S3, S4, and S8 using:
+Plot figures S1 (expected allele frequency change under neutrality in populations of 450 and 9000 individuals), S3 (allele frequency changes in a population of 450 until generation 2500 under trait optimum model), S4 (allele freqeuncies of 100 selected alleles in populations of 450 and 9000 individuals under sweep and trait optimum models), and S8 (variance of the fitness and variance of the number of selected alleles per haplotype in a population of 450 individuals with different number of selected alleles under sweep model) using:
 
 ```
 misc_plots.py

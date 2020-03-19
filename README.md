@@ -12,7 +12,7 @@ The new trait optimum needs to be changed if the number of loci and their effect
 
 ## Run simulations
 
-MimicrEE2 was used to perform simulations (https://sourceforge.net/projects/mimicree2/). Haplotype file and selected loci can be generated using prep_files_mimicree2.py. For quantitative trait simulations, the fitness function can be generated using scale_new_trait_optimum.py. The D. simulans recombination map (Dsim_recombination_map_LOESS_100kb_1.txt) is available from Dryad (doi:10.5061/dryad.744p394). Because D. simulans males do not recombine, we divided the recombination rate estimates by two. For neutral simulations the procedure is the same as selection simulations except that the effect size/selection coefficient of alleles are set to zero. Sample command lines for running sweep (w) and quantitative trait (qff) simulations are provided below:
+MimicrEE2 was used to perform simulations (https://sourceforge.net/projects/mimicree2/). Haplotype file and the file for selected loci can be generated using prep_files_mimicree2.py. For quantitative trait simulations, the fitness function can be generated using scale_new_trait_optimum.py. The D. simulans recombination map (Dsim_recombination_map_LOESS_100kb_1.txt) is available from Dryad (doi:10.5061/dryad.744p394). Because D. simulans males do not recombine, we divided the recombination rate estimates by two. For neutral simulations the procedure is the same as selection simulations except that the effect size/selection coefficient of alleles are set to zero. Sample command lines for running sweep (w) and quantitative trait (qff) simulations are provided below:
 
 ```
 java -jar mim2-v193.jar w --haplotypes-g0 FlLines_FreeBayes_biallelicSNPs_q50_450Ne_No4X_100loci.mimhap --recombination-rate Dsim_recombination_map_LOESS_100kb_1.txt --chromosome-definition "2=2L+2R,3=3L+3R" --replicate-runs 500 --snapshots 10,20,30,40,50,60,70,80,90,100,110,120,130,140 --fitness sel.txt --output-sync AF_results.sync --output-gpf fitness_result.txt
@@ -28,5 +28,41 @@ java -jar mim2-v193.jar w --haplotypes-g0 FlLines_FreeBayes_biallelicSNPs_q50_45
 
 ```
 ## Analyze and plot the results
+
+You can analyze and plot the results of simualtions similar to our manuscript using the below scripts:
+
+Plot the allele freqeuncy trajectories of selected alleles in sweep and trait optimum models (Figures 1, 6, 8, S2, S6, S7, S10 and S12) using 
+
+```
+AF_traj_plots.py
+```
+
+Plot the fitness (for sweep model) and phenotype (for trait optimum model) of populations (Figures 2, 5, 7, S5, S11) using
+
+```
+fitness_phenotype_plots.py
+
+```
+The simulations for storing the haplotype information were run in 50 replicates only and haplotypes at generations 0 20,40,80, 140 were saved. Plot the distribution of selected alleles in haplotypes for sweep and trait optimum models (Figures 4 and 9) using
+
+```
+haplotype_distribution.py
+```
+
+Compute and plot the similarity among 10 replicates in terms of the number of selected alleles (Figures 3 and S9) using 
+
+```
+Jaccard_index_plots.py
+```
+
+Plot figures S1, S3, S4, and S8 using
+
+```
+misc_plots.py
+```
+
+
+
+
 
 

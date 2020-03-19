@@ -20,3 +20,7 @@ java -jar mim2-v193.jar w --haplotypes-g0 FlLines_FreeBayes_biallelicSNPs_q50_45
 java -jar mim2-v193.jar qff --haplotypes-g0 FlLines_FreeBayes_biallelicSNPs_q50_4500Ne_No4X_100loci.mimhap --recombination-rate Dsim_recombination_map_LOESS_100kb_1.txt --chromosome-definition "2=2L+2R,3=3L+3R" --replicate-runs 500 --snapshots 10,20,30,40,50,60,70,80,90,100,110,120,130,140 --effect-size effect_size.txt --heritability 0.5 --fitness-function sel.txt --output-sync AF.sync.gz --output-gpf GenoPheno.gpf
 
 ```
+
+## Analyze and plot the results
+
+

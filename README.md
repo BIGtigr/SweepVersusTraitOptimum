@@ -37,31 +37,41 @@ java -jar mim2-v193.jar w --haplotypes-g0 FlLines_FreeBayes_biallelicSNPs_q50_45
 
 You can analyze and plot the results of simualtions similar to our manuscript using the below scripts:
 
-3.1 You can plot the allele freqeuncy trajectories of selected alleles in sweep and trait optimum models (Figures 1, 6, 8, S2, S6, S7, S10 and S12) using the below script. To run this script you need the output of simulations in sync format for simulations with selection and  neutral simulations. you also need the list of selected sites (sel.txt for sweep and effect_size.txt for quantitative trait simulations).
+### 3.1 
+
+You can plot the allele freqeuncy trajectories of selected alleles in sweep and trait optimum models (Figures 1, 6, 8, S2, S6, S7, S10 and S12) using the below script. To run this script you need the output of simulations in sync format for simulations with selection and  neutral simulations. you also need the list of selected sites (sel.txt for sweep and effect_size.txt for quantitative trait simulations).
 
 ```
 AF_traj_plots.py
 ```
 
-3.2 You can plot the fitness (for sweep model) and phenotype (for trait optimum model) of populations (Figures 2, 5, 7, S5, S11) using the below script. You only need the genotype/phenotype/fitness result of simulations.
+### 3.2 
+
+You can plot the fitness (for sweep model) and phenotype (for trait optimum model) of populations (Figures 2, 5, 7, S5, S11) using the below script. You only need the genotype/phenotype/fitness result of simulations.
 
 ```
 fitness_phenotype_plots.py
 
 ```
-3.3 In our manuscript, the simulations for storing the haplotype information were run in 50 iterations only and haplotypes at generations 0 20, 40, 80, and 140 were saved. You can plot the distribution of selected alleles in haplotypes for sweep and trait optimum models (Figures 4 and 9) using the below script. To run this script you need the list of selected sites (sel.txt for sweep and effect_size.txt for quantitative trait simulations) and the path to the folder where haplotypes are stored.
+### 3.3 
+
+In our manuscript, the simulations for storing the haplotype information were run in 50 iterations only and haplotypes at generations 0 20, 40, 80, and 140 were saved. You can plot the distribution of selected alleles in haplotypes for sweep and trait optimum models (Figures 4 and 9) using the below script. To run this script you need the list of selected sites (sel.txt for sweep and effect_size.txt for quantitative trait simulations) and the path to the folder where haplotypes are stored.
 
 ```
 haplotype_distribution.py
 ```
 
-3.4 You can compute and plot the similarity among replicates in terms of the number of selected alleles (Figures 3 and S9) using the below script. We have divided 5000 iterations into 50 experimental evolution with 10 replicates anda similarity among 10 replicates are computed. To run this script you need the list of selected sites (sel.txt for sweep and effect_size.txt for quantitative trait simulations) and the output of simulations in sync format for simulations with selection and neutral simulations.
+### 3.4 
+
+You can compute and plot the similarity among replicates in terms of the number of selected alleles (Figures 3 and S9) using the below script. We have divided 5000 iterations into 50 experimental evolution with 10 replicates anda similarity among 10 replicates are computed. To run this script you need the list of selected sites (sel.txt for sweep and effect_size.txt for quantitative trait simulations) and the output of simulations in sync format for simulations with selection and neutral simulations.
 
 ```
 Jaccard_index_plots.py
 ```
 
-3.5 Using the below script you can plot:
+### 3.5 
+
+Using the below script you can plot:
 figures S1 (expected allele frequency change under neutrality in populations of 450 and 9000 individuals)
 figure S3 (allele frequency changes in a population of 450 until generation 2500 under trait optimum model)
 figure S4 (allele freqeuncies of 100 selected alleles in populations of 450 and 9000 individuals under sweep and trait optimum models) figure S8 (variance of the fitness and variance of the number of selected alleles per haplotype in a population of 450 individuals with different number of selected alleles under sweep model). 

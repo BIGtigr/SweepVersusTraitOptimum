@@ -37,7 +37,7 @@ java -jar mim2-v193.jar w --haplotypes-g0 FlLines_FreeBayes_biallelicSNPs_q50_45
 
 You can analyze and plot the results of simualtions similar to our manuscript using the below scripts:
 
-### 3.1 
+### 3.1 Allele frequency of selected alleles
 
 You can plot the allele freqeuncy trajectories of selected alleles in sweep and trait optimum models (Figures 1, 6, 8, S2, S6, S7, S10 and S12) using the below script. To run this script you need the output of simulations in sync format for simulations with selection and  neutral simulations. you also need the list of selected sites (sel.txt for sweep and effect_size.txt for quantitative trait simulations).
 
@@ -45,7 +45,7 @@ You can plot the allele freqeuncy trajectories of selected alleles in sweep and 
 AF_traj_plots.py
 ```
 
-### 3.2 
+### 3.2 Fitness and phenotype
 
 You can plot the fitness (for sweep model) and phenotype (for trait optimum model) of populations (Figures 2, 5, 7, S5, S11) using the below script. You only need the genotype/phenotype/fitness result of simulations.
 
@@ -53,7 +53,7 @@ You can plot the fitness (for sweep model) and phenotype (for trait optimum mode
 fitness_phenotype_plots.py
 
 ```
-### 3.3 
+### 3.3 Distribution of selected alleles in haplotypes
 
 In our manuscript, the simulations for storing the haplotype information were run in 50 iterations only and haplotypes at generations 0 20, 40, 80, and 140 were saved. You can plot the distribution of selected alleles in haplotypes for sweep and trait optimum models (Figures 4 and 9) using the below script. To run this script you need the list of selected sites (sel.txt for sweep and effect_size.txt for quantitative trait simulations) and the path to the folder where haplotypes are stored.
 
@@ -61,7 +61,7 @@ In our manuscript, the simulations for storing the haplotype information were ru
 haplotype_distribution.py
 ```
 
-### 3.4 
+### 3.4 Parallelism across replicates
 
 You can compute and plot the similarity among replicates in terms of the number of selected alleles (Figures 3 and S9) using the below script. We have divided 5000 iterations into 50 experimental evolution with 10 replicates anda similarity among 10 replicates are computed. To run this script you need the list of selected sites (sel.txt for sweep and effect_size.txt for quantitative trait simulations) and the output of simulations in sync format for simulations with selection and neutral simulations.
 
@@ -69,7 +69,7 @@ You can compute and plot the similarity among replicates in terms of the number 
 Jaccard_index_plots.py
 ```
 
-### 3.5 
+### 3.5 Miscellaneous plots
 
 Using the below script you can plot:
 figures S1 (expected allele frequency change under neutrality in populations of 450 and 9000 individuals)
